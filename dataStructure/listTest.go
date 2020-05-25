@@ -32,13 +32,27 @@ func main()  {
 	for i := 0; i < list.Len(); i++ {
 		// 从头部开始索引
 		node := list.IndexFromHead(i)
-		fmt.Println("node: ", node, &node)
+		//fmt.Println("node: ", node)
+		fmt.Printf("node:, %v, %p\n",node, node)
 
 		// 节点为空不可能，因为list.Len()使得索引不会越界
 		//if !node.IsNil() {
 		//	fmt.Println(node.GetValue())
 		//}
 	}
+
+	segmentation()
+	// pop 元素
+
+	for {
+		value := list.PopFromHead(0)
+		if value.IsNil() {
+			break
+		}
+		fmt.Printf("pop elem value: %v\n", value.GetValue())
+	}
+
+	fmt.Println("len: ", list.Len())
 
 
 	segmentation()

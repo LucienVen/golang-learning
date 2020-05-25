@@ -1,6 +1,8 @@
 package baseStruct
 
-import "sync"
+import (
+	"sync"
+)
 
 /* 列表实现 - 双端列表/双端队列 - 双向链实现 */
 
@@ -217,7 +219,7 @@ func (list *DoubleList) PopFromHead(n int) *ListNode {
 
 	// 获取定位节点的上一个节点与下一个节点
 	prevNode := node.prev
-	nextNode := node.prev
+	nextNode := node.next
 
 
 	if prevNode.IsNil() && nextNode.IsNil() {
@@ -291,7 +293,10 @@ func (list *DoubleList) Len() int {
 	return list.len
 }
 
-
+/* 获取头节点 */
+func (list *DoubleList) First() *ListNode {
+	return list.head
+}
 
 
 
