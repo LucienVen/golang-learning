@@ -3,7 +3,7 @@ package sortingAlgorithm
 /* 归并排序 */
 
 /* 自顶向下 */
-func MergeSort(array int[], begin int, end int)  {
+func MergeSort(array []int, begin int, end int)  {
 	
 	// 元素数量大于1 才进入递归
 	if end - begin > 1 {
