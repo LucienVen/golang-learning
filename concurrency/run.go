@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go.learning/concurrency/part3"
+	"go.learning/concurrency/part4"
 )
 
 func main()  {
@@ -11,6 +11,10 @@ func main()  {
 
 	//part3.SimpleChannelDemo()
 	//part3.ChannalBufDemo()
+	//part3.ChannalOwnerDemo()
+	//part3.SelectDefault()
 
-	part3.ChannalOwnerDemo()
+	part4.ChannelReadLimit()
 }
+
+
